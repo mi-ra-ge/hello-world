@@ -40,7 +40,6 @@ jobs:
       #   reportFormat: xml,html,custom
       #   additionalParams: '-property report.custom.extension=sarif -property report.custom.xsl.file=${PARASOFT_SARIF_XSL}'
           testConfig: 'builtin://MISRA C 2012'
-          reportDir: '../reports'
           additionalParams: '-localsettings d:\temp\pro\standalone\cpptest\config.properties'
           commandLinePattern: '${cpptestcli} -data ../workspace -config "${testConfig}" -report "${reportDir}" -bdf "${input}" ${additionalParams}'
 
