@@ -41,16 +41,16 @@ jobs:
       # Optional parameters for 'run-cpptest-action'.
       with:
         # For CMake-based projects, use a compile_commands.json file as the input for analysis. 
-        #input: build/Timer.sln
-        input: build/compile_commands.json
+        input: build/Timer.sln
+        #input: build/compile_commands.json
         # Uncomment if you are using C/C++test 2020.2 to generate a SARIF report:
         # reportFormat: xml,html,custom
         # additionalParams: '-property report.custom.extension=sarif -property report.custom.xsl.file=${PARASOFT_SARIF_XSL}'
-        #compilerConfig: vc_14_2-64
-        compilerConfig: gcc_9-64
+        compilerConfig: vc_14_2-64
+        #compilerConfig: gcc_9-64
         #installDir: 'D:/temp/std/cpptest'
-        installDir: '/home/mirage/session/cpptest'
-
+        #installDir: '/home/mirage/session/cpptest'
+        
     # Uploads analysis results in the SARIF format, so that they are displayed as GitHub code scanning alerts.
     - name: Upload results (SARIF)
       uses: github/codeql-action/upload-sarif@v1
