@@ -39,7 +39,7 @@ jobs:
       with:
       #   reportFormat: xml,html,custom
       #   additionalParams: '-property report.custom.extension=sarif -property report.custom.xsl.file=${PARASOFT_SARIF_XSL}'
-          testConfig: 'builtin://MISRA C 2012'
+          testConfig: 'builtin://MISRA C 2004'
           additionalParams: '-localsettings /home/mirage/session/config.properties'
           commandLinePattern: '${cpptestcli} -data ../workspace -config "${testConfig}" -report "${reportDir}" -bdf "${input}" ${additionalParams}'
 
