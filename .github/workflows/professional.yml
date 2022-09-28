@@ -5,8 +5,8 @@ on:
   # Triggers the workflow on push or pull request events but only for the master branch.
   push:
     branches: [ master ]
-  pull_request:
-    branches: [ master, main ]
+#  pull_request:
+#    branches: [ master, main ]
 
   # Allows you to run this workflow manually from the Actions tab.
   workflow_dispatch:
@@ -34,16 +34,16 @@ jobs:
       run: cpptesttrace make clean all
 
     # Runs code analysis with C/C++test.
-    - name: Run C/C++test
+#    - name: Run C/C++test
       # Use the 'run-cpptest-action' GitHub action.
-      uses: parasoft/run-cpptest-action@1.0.1
+#      uses: parasoft/run-cpptest-action@1.0.1
       # Uncomment if you are using C/C++test 2020.2 to generate a SARIF report:
-      with:
+#      with:
       #   reportFormat: xml,html,custom
       #   additionalParams: '-property report.custom.extension=sarif -property report.custom.xsl.file=${PARASOFT_SARIF_XSL}'
-          testConfig: 'builtin://Recommended Rules'
-          additionalParams: '-property "report.format=sarif"'
-          commandLinePattern: '${cpptestcli} -data ../workspace -config "${testConfig}" -report "${reportDir}" -bdf "${input}" ${additionalParams}'
+#          testConfig: 'builtin://Recommended Rules'
+#          additionalParams: '-property "report.format=sarif"'
+#          commandLinePattern: '${cpptestcli} -data ../workspace -config "${testConfig}" -report "${reportDir}" -bdf "${input}" ${additionalParams}'
 
     # Uploads analysis results in the SARIF format, so that they are displayed as GitHub code scanning alerts.
     - name: Upload results (SARIF)
