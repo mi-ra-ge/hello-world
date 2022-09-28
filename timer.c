@@ -133,6 +133,7 @@ void format_timer_record(int idx, char* buf)
     strftime(start, BUF_SIZE, "%I:%M %p", localtime(&tr->starttime));
     strftime(end, BUF_SIZE, "%I:%M %p", localtime(&tr->endtime));
 
+    
     if (tr) {
         sprintf(buf, "%d\t%s\t%s\t%d\n", idx+1, start, end, tr->channel);
     }
