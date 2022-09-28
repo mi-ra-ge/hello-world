@@ -82,6 +82,11 @@ int add_timer()
     } else {
         return ERROR_CODE;
     }
+    
+    if (record) {
+        add_timer_record(record);
+    }
+    
     return 0;
 }
 
