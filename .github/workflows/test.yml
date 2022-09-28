@@ -32,15 +32,15 @@ jobs:
       run: cpptesttrace make clean all
 
     # Runs code analysis with C/C++test.
-    - name: Run C/C++test
+#    - name: Run C/C++test
       # Use the 'run-cpptest-action' GitHub action.
-      uses: parasoft/run-cpptest-action@1.0.0
+#      uses: parasoft/run-cpptest-action@1.0.0
       # Uncomment if you are using C/C++test 2020.2 to generate a SARIF report:
-      with:
+#      with:
       #   reportFormat: xml,html,custom
       #   additionalParams: '-property report.custom.extension=sarif -property report.custom.xsl.file=${PARASOFT_SARIF_XSL}'
-        testConfig: 'builtin://MISRA C 2012'
-        commandLinePattern: 'dir'
+#        testConfig: 'builtin://MISRA C 2012'
+#        commandLinePattern: 'dir'
 
     # Uploads analysis results in the SARIF format, so that they are displayed as GitHub code scanning alerts.
     - name: Upload results (SARIF)
