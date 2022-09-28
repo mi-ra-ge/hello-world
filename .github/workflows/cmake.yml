@@ -35,18 +35,18 @@ jobs:
       run: cmake --build build
 
     # Runs code analysis with C/C++test.
-    - name: Run C/C++test
+#    - name: Run C/C++test
       # Use the 'run-cpptest-action' GitHub action.
-      uses: parasoft/run-cpptest-action@1.0.1
+#      uses: parasoft/run-cpptest-action@1.0.1
       # Optional parameters for 'run-cpptest-action'.
-      with:
+#      with:
         # For CMake-based projects, use a compile_commands.json file as the input for analysis. 
-        input: build/Timer.sln
+#        input: build/Timer.sln
         #input: build/compile_commands.json
         # Uncomment if you are using C/C++test 2020.2 to generate a SARIF report:
         # reportFormat: xml,html,custom
         # additionalParams: '-property report.custom.extension=sarif -property report.custom.xsl.file=${PARASOFT_SARIF_XSL}'
-        compilerConfig: vc_14_2-64
+#        compilerConfig: vc_14_2-64
         #compilerConfig: gcc_9-64
         #installDir: 'D:/temp/std/cpptest'
         #installDir: '/home/mirage/session/cpptest'
