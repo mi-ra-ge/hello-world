@@ -41,7 +41,7 @@ jobs:
       with:
       #  testConfig: 'builtin://MISRA C++ 2008'
       #   reportFormat: xml,html,custom
-         additionalParams: '-property scope.scontrol.files.filter.mode=branch -property scope.scontrol.ref.branch=origin/main'
+         additionalParams: '-property scope.scontrol.files.filter.mode=branch -property scope.scontrol.ref.branch=origin/main -property console.verbosity.level=high'
 
     # Uploads analysis results in the SARIF format, so that they are displayed as GitHub code scanning alerts.
     - name: Upload results (SARIF)
