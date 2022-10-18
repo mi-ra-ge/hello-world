@@ -36,8 +36,8 @@ jobs:
     # Runs code analysis with C/C++test.
     - name: Run C/C++test
       # Use the 'run-cpptest-action' GitHub action.
-      #uses: parasoft/run-cpptest-action@1.0.1
-      uses: mi-ra-ge/run-cooler-cpptest-action@node16
+      uses: parasoft/run-cpptest-action@1
+      #uses: mi-ra-ge/run-cooler-cpptest-action@node16
       # Uncomment if you are using C/C++test 2020.2 to generate a SARIF report:
       with:
       #  testConfig: 'builtin://MISRA C++ 2008'
