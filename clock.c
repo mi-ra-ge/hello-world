@@ -17,6 +17,7 @@ void display_time()
     char *t = ctime(&the_time);
     
     sprintf(buf, "\n\nCurrent Time and Date is %s\n\n", t);
+    t = "abc";
     if (t) {
         int iii = 1;
     }
