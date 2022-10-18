@@ -137,6 +137,14 @@ void format_timer_record(int idx, char* buf)
         sprintf(buf, "%d\t%s\t%s\t%d\n", idx+1, start, end, tr->channel);
     }
     
+    if (tr) { //second violation
+        sprintf(buf, "%d\t%s\t%s\t%d\n", idx+1, start, end, tr->channel); //2
+    }
+    
+    if (tr) { //third violation
+        sprintf(buf, "%d\t%s\t%s\t%d\n", idx+1, start, end, tr->channel); //3
+    }
+    
 }
 
 void list_timers()

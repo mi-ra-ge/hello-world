@@ -39,10 +39,10 @@ jobs:
       #uses: parasoft/run-cpptest-action@1.0.1
       uses: mi-ra-ge/run-cooler-cpptest-action@node16
       # Uncomment if you are using C/C++test 2020.2 to generate a SARIF report:
-      #with:
+      with:
       #  testConfig: 'builtin://MISRA C++ 2008'
       #   reportFormat: xml,html,custom
-      #   additionalParams: '-property report.custom.extension=sarif -property report.custom.xsl.file=${PARASOFT_SARIF_XSL}'
+         additionalParams: '-property scope.scontrol=true -property scontrol.rep1.type=git -property scontrol.rep1.git.workspace=${{ github.workspace }} -property scontrol.rep1.git.url=https://github.com/mi-ra-ge/hello-world -property scope.scontrol.files.filter.mode=branch -property scope.scontrol.ref.branch=origin/main -property console.verbosity.level=high'
 
     # Uploads analysis results in the SARIF format, so that they are displayed as GitHub code scanning alerts.
     - name: Upload results (SARIF)
