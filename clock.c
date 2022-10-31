@@ -17,6 +17,10 @@ void display_time()
     char *t = ctime(&the_time);
     
     sprintf(buf, "\n\nCurrent Time and Date is %s\n\n", t);
+         t = "winda";
+    if (t) {
+        int iii = 1;
+    }
     print_string(buf);
 }
 
