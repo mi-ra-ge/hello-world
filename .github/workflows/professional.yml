@@ -50,6 +50,7 @@ jobs:
       #   reportFormat: xml,html,custom
       #   additionalParams: '-property report.custom.extension=sarif -property report.custom.xsl.file=${PARASOFT_SARIF_XSL}'
 #          testConfig: 'builtin://Recommended Rules'
+          input: 'build/compile_commands.json'
           additionalParams: '-property "report.format=sarif"'
           commandLinePattern: '${cpptestcli} -data ../workspace -config "${testConfig}" -report "${reportDir}" -bdf "${input}" ${additionalParams}'
 
