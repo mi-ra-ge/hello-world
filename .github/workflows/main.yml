@@ -39,8 +39,8 @@ jobs:
       #uses: parasoft/run-cpptest-action@1.0.1
       uses: mi-ra-ge/run-cooler-cpptest-action@master
       # Uncomment if you are using C/C++test 2020.2 to generate a SARIF report:
-      #with:
-      #  testConfig: 'builtin://MISRA C++ 2008'
+      with:
+        testConfig: 'builtin://MISRA C++ 2008xxxxx'
       #   reportFormat: xml,html,custom
       #   additionalParams: '-property report.custom.extension=sarif -property report.custom.xsl.file=${PARASOFT_SARIF_XSL}'
 
