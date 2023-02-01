@@ -52,9 +52,9 @@ jobs:
         sarif_file: reports/report.sarif
     
     # Uploads an archive that includes all report files (.xml, .html, .sarif).
-#     - name: Archive reports
-#       if: always()
-#       uses: actions/upload-artifact@v3
-#       with:
-#         name: CpptestReports
-#         path: reports/*.*
+    - name: Archive reports
+      if: always()
+      uses: actions/upload-artifact@v3
+      with:
+        name: CpptestReports
+        path: reports/*.*
